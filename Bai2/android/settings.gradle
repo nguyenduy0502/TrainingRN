@@ -1,0 +1,3 @@
+rootProject.name = 'Bai2'
+
+include ':app'
