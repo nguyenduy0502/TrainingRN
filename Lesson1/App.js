@@ -1,15 +1,11 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
-
 import React, { Component } from 'react';
 import {
   Platform,
   StyleSheet,
   Text,
-  View
+  View,
+    TouchableOpacity,
+
 } from 'react-native';
 
 const instructions = Platform.select({
@@ -19,19 +15,31 @@ const instructions = Platform.select({
     'Shake or press menu button for dev menu',
 });
 
+
+
+var number= 10;
+
+
+function CheckInfo() {
+  let name="Nguyen Duy";
+  alert("Gia tri la " + number + "Name " + name);
+
+
+}
+var Showme = ()=>{
+   alert (name);
+
+}
+
+
 export default class App extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit App.js
-        </Text>
-        <Text style={styles.instructions}>
-          {instructions}
-        </Text>
+
+        <TouchableOpacity onPress={()=>CheckInfo()}>
+          <Text>Click Me</Text>
+        </TouchableOpacity>
       </View>
     );
   }
